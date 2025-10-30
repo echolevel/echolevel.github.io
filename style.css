@@ -6,3 +6,21 @@ body {
     font-family: system-ui;
     background-color: #fcfcfc;
 }
+
+a {
+    color: #444;
+}
+
+a:hover 
+{
+    color: #666;
+}
+
+ul {
+    list-style-type:square;
+}
+
+hr {
+    border-style: dashed;
+    border-width: medium;
+}
