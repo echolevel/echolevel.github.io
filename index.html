@@ -1,8 +1,41 @@
+<!DOCTYPE html>
 <html>
-    <head>
+<head>
+  <meta charset="utf-8">
+  <title>Echolevel Blog</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <h1>Echolevel Blog</h1>
+  <nav id="post-list"></nav>
+  <article id="content"></article>
 
-    </head>
-    <body>
-        .
-    </body>
+  <script>
+    // List your posts manually (or automate later)
+    const posts = [
+      { title: "Hello World", file: "2025-01-hello-world.md" },
+      { title: "Another Post", file: "2025-02-another-post.md" }
+    ];
+
+    const postList = document.getElementById("post-list");
+    posts.forEach(p => {
+      const link = document.createElement("a");
+      link.href = `#${p.file}`;
+      link.textContent = p.title;
+      postList.appendChild(link);
+      postList.appendChild(document.createElement("br"));
+    });
+
+    async function loadPost(hash) {
+      const file = hash ? hash.substring(1) : posts[0].file;
+      const res = await fetch(`posts/${file}`);
+      const md = await res.text();
+      document.getElementById("content").innerHTML = marked.parse(md);
+    }
+
+    window.addEventListener("hashchange", () => loadPost(location.hash));
+    loadPost(location.hash);
+  </script>
+</body>
 </html>
