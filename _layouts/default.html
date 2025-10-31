@@ -3,21 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }} - {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  <style>
+    body {
+    font-size: 16px;
+    width: 850px;
+    margin: 0 auto;
+    font-family: system-ui;
+    background-color: #fcfcfc;
+    }
+
+    h1,h2,h3,h4,h5{
+        color: #333;
+    }
+
+    a {
+        color: #444;
+    }
+
+    a:hover 
+    {
+        color: #666;
+    }
+
+    ul {
+        list-style-type:square;
+    }
+
+    .postlist {
+        list-style-type:none;
+    }
+
+    hr {
+        border-style:solid;
+        border-width: 0.05rem;
+    }
+
+    pre {
+        padding-left: 1rem;
+        border-left: solid 0.5rem #555;
+    }
+
+    .highlight pre {
+        background: #1e1e1e;
+        color: #dcdcdc;
+        padding: 1em;
+        border-radius: 6px;
+        overflow-x: auto;
+        }
+
+    .highlight .k { color: #569CD6; } /* keyword */
+    .highlight .nf { color: #4EC9B0; } /* function name */
+    .highlight .n { color: #9CDCFE; }  /* identifier */
+
+    p .language-plaintext {
+        background: #1e1e1e;
+        color: #dcdcdc;
+        padding: 0.125rem;
+        border-radius: 6px;
+    }
+
+    table {
+        border: solid 1px #333;
+        border-collapse: collapse;
+    }
+
+    th, td{
+        padding: 0.4rem;
+        border: solid 2px #555;
+    }
+
+
+
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body>
   <header>
     <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-    <p>{{ site.description }}</p>
-    <hr>
-  </header>
+    <p>
+        Brendan O'Callaghan Ratliff - composer, sound engineer and game developer specialising in realtime 
+        dynamic music systems. Audio Director at <a href="https://cardboardsword.co.uk/">Cardboard Sword</a>. 
+        This is an occasional dev blog.
+        Portfolio site <a href="https://echolevel.co.uk/">here</a>.
+    </p>
 
+    <a title="bluesky" href="https://bsky.app/profile/echolevel.co.uk" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bluesky"></i></a> &nbsp;
+    <a title="blog" href="http://echolevel.tumblr.com"><i class="fa-brands fa-tumblr"></i></a> &nbsp;
+    <a title="github" href="http://github.com/echolevel" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a> &nbsp;
+    <a title="bandcamp" href="http://syphus.bandcamp.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bandcamp"></i></a>
+              
+  </header>
+  <br/>
+  
   <main>
     {{ content }}
   </main>
 
   <footer>
-    <hr>
+    <br/>
     <p>© {{ site.time | date: "%Y" }} {{ site.title }}</p>
   </footer>
 </body>

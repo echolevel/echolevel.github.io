@@ -1,14 +1,15 @@
 ---
 layout: default
-title: Home
+title: blog
 ---
 
-<h2>Posts</h2>
-<ul>
-  {% for post in site.posts %}
-  <li>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+
+{% for post in site.posts %}
+
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
     <small>{{ post.date | date: "%Y-%m-%d" }}</small>
-  </li>
-  {% endfor %}
-</ul>
+    <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+    <a href="{{ post.url | relative_url }}">Read more →</a>
+    
+{% endfor %}
+

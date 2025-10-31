@@ -1,1 +1,8 @@
 node_modules
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile
+Gemfile.lock
+run.ps1
