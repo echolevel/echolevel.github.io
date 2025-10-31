@@ -2,7 +2,6 @@
 layout: post
 title: "Hello World"
 date: 2025-10-30
-categories: [gamedev]
 tags: []
 ---
 This is a test of a Jekyll-powered blog hosted on GitHub pages and mapped to a subdomain of my main website.
