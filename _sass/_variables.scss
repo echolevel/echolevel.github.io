@@ -1,0 +1,40 @@
+//$fontstack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+//$fontstack: Menlo, Andale Mono, Consolas, DejaVu Sans Mono, monospace;
+$fontstack: system-ui, sans-serif;
+//$fontstack: CourierPrime, Consolas, DeaVu Sans Mono, monospace;
+
+$inverted: false;
+
+$basefontsize: 16px;
+$baselineheight: 24px;
+$basefontweight: 400;
+$table_head_col: #ccc;
+$table_row_col: #eee;
+$table_bor_col: #eee;
+$container_width: 100%;
+$max_width: 850px;
+$first_col_width: 150px;
+
+
+$pal_bg: #fff;
+$pal_inv: #1b1b1a;
+//$pal_font: #191919;
+$pal_font: #000;
+$pal_link: #555;
+
+@if $inverted == true {
+  $pal_bg: #1b1b1a;
+  $pal_inv: #fff;
+  //$pal_bg: #1b1b1f;
+  $pal_font: #eee;
+  $pal_link: #8dafba;
+}
+
+
+$pal_font_hi: #333333;
+$pal_font_lo: #222;
+$pal_font_megahi: #aaa;
+$pal_font_medihi: #888;
+
+
+$pal_link_hover: #777;

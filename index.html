@@ -1,15 +1,72 @@
 ---
 layout: default
-title: blog
+title: home
 ---
 
+    <div class="section">
+        <strong>Brendan O'Callaghan Ratliff</strong> - composer, sound engineer and game developer.
+              
+        I'm also Audio Director at <a target="_blank" rel="noopener noreferrer" href="https://cardboardsword.co.uk/">Cardboard Sword</a>
+        where we've just released 
+        <a href="https://store.steampowered.com/app/653060/The_Siege_and_the_Sandfox/" target="_blank">The Siege and The Sandfox</a> and 
+        are working on the forthcoming game
+        <a href="https://store.steampowered.com/app/509950/Transmission/" target="_blank">Transmission</a>.     
 
-{% for post in site.posts %}
+        <div class="section-title" id="skills">
+            I specialise in:
+        </div>
+        <ul>
+            <li>
+            Game music, sound design & audio production
+            </li>
+            <li>
+            Design & implementation of realtime dynamic/procedural game music systems in Unreal Engine (C++ and Blueprint);
+            at Cardboard Sword I write and maintain our in-house audio middleware, including a standalone DAW and various Unreal Engine plugins.
+            </li>
+            <li>
+            General gameplay and game systems coding; dev tooling; build engineering
+            </li>
+            <li>
+            Location sound recording & audio post production for TV, film, radio and podcast
+            </li>            
+        </ul>
 
-    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-    <small>{{ post.date | date: "%Y-%m-%d" }}</small>
-    <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
-    <a href="{{ post.url | relative_url }}">Read more →</a>
-    
-{% endfor %}
+        
+        <div class="section-title" id="clients">
+            Freelance clients include:
+        </div>            
+        
+        <div class="flex-container" id="clients" style="display: flex; align-items: center; flex-wrap: wrap; text-align: center;">
+            
+            <div><img title="BBC" alt="BBC" style="width:175px" src="assets/img/clients/bbc.png"/><br/></div>
+            <div><img title="NHS" alt="NHS" style="width:175px" src="assets/img/clients/nhs-bw2.jpg"/><br/></div>
+            <div><img title="Nike" alt="Nike" style="width:175px" src="assets/img/clients/nike.jpg"/><br/></div>
+            <div><img title="Adidas" alt="Adidas" style="width:175px" src="assets/img/clients/adidas.jpg"/><br/></div>
+            <div><img title="Atomhawk (Sumo Group)" alt="Atomhawk (Sumo Group)" style="width:175px" src="assets/img/clients/atomhawk.webp"/><br/></div>
+            <div><img title="END. Clothing" alt="END. Clothing" style="width:175px" src="assets/img/clients/endclothing.jpg"/><br/></div>
+            <div><img title="JD Sports" alt="JD Sports" style="width:175px;"  src="assets/img/clients/jd-sports.png"/><br/></div>
+            <div><img title="Roots & Wings" alt="Roots & Wings" style="width:175px"  src="assets/img/clients/Roots+and+Wings-STAMP.png"/><br/></div>              
+            <div><img title="Newcastle United Football Club" alt="Newcastle United Football Club" style="width:175px" src="assets/img/clients/nufc.jpg"/><br/></div>
+            <div><img title="Sunderland AFC" alt="Sunderland AFC" style="width:175px" src="assets/img/clients/tn_sunderland_afc.png"/><br/></div>
+            <div><img title="The Deli Film Co" alt="The Deli Film Co" style="width:175px" src="assets/img/clients/delifilmco.jpg"/><br/></div>
+            <div><img title="Nexus Travel" alt="Nexus Travel" style="width:175px"  src="assets/img/clients/nexus.png"/><br/> </div>              
+                        
+        </div>                   
 
+        <div class="section-title">
+            Recent blog posts
+        </div>
+
+        {% for post in site.posts limit:1 %}
+
+            <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+            <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+            <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+            <a href="{{ post.url | relative_url }}">Read more →</a>
+            
+        {% endfor %}
+
+        <p><a href="{{ '/blog/' | relative_url }}">All blog posts →</a></p>
+
+
+    </div><!-- section end -->

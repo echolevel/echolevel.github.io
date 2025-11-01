@@ -2,8 +2,14 @@ title: echolevel
 description: "Brendan O'Callaghan Ratliff - composer, sound engineer and game developer specialising in realtime dynamic music systems. Audio Director at Cardboard Sword."
 baseurl: ""
 url: "https://blog.echolevel.co.uk"
+paginate: 10                      # posts per page
+paginate_path: "/blog/page:num/"  # URLs like /blog/page2/
 syntax_highlighter: rouge
 # Watch additional files for changes
 watch: true
 include:
   - style.css
+collections:
+  projects:
+    output: true # they should get their own HTML pages
+    permalink: /projects/:name/

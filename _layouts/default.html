@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }} - {{ site.title }}</title>
+  <!--
   <style>
     body {
     font-size: 16px;
     width: 850px;
     margin: 0 auto;
-    font-family: system-ui;
+    font-family: system-ui, sans-serif;
     background-color: #fcfcfc;
     }
 
@@ -74,34 +75,88 @@
 
 
 
-  </style>
+  </style>-->
+  
+    <link rel="icon"
+      type="image/png"
+      href="assets/img/favicon.png">
+
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{% if page.layout == "post" %}
+  <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
+{% endif %}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
+
+
+
 <body>
-  <header>
-    <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
-    <p>
-        Brendan O'Callaghan Ratliff - composer, sound engineer and game developer specialising in realtime 
-        dynamic music systems. Audio Director at <a href="https://cardboardsword.co.uk/">Cardboard Sword</a>. 
-        This is an occasional dev blog.
-        Portfolio site <a href="https://echolevel.co.uk/">here</a>.
-    </p>
 
-    <a title="bluesky" href="https://bsky.app/profile/echolevel.co.uk" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bluesky"></i></a> &nbsp;
-    <a title="blog" href="http://echolevel.tumblr.com"><i class="fa-brands fa-tumblr"></i></a> &nbsp;
-    <a title="github" href="http://github.com/echolevel" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a> &nbsp;
-    <a title="bandcamp" href="http://syphus.bandcamp.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bandcamp"></i></a>
+    <div class="wrap">
+      <div class="innerwrap">
+
+        <div class="top-bar">
+
+        </div>
+
+        <div class="container">
+
+            <div class="section head-section">
+            
+              <!--<img class="avatar-image" src="{{ '/assets/img/echo_av.jpg' | relative_url }}" alt="profile photo"/>-->
+
               
-  </header>
-  <br/>
-  
-  <main>
-    {{ content }}
-  </main>
+                                          
+          
+            </div>
+          
+            <br/>
 
-  <footer>
-    <br/>
-    <p>© {{ site.time | date: "%Y" }} {{ site.title }}</p>
-  </footer>
-</body>
+            
+            <div class="section">
+                    
+
+                <div class="nav-bar">
+                    <div class="nav-left">
+
+                        <div class="titletext"><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">
+                          {{ site.title }}</a></div>&bull;
+                        <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">
+                          about</a> &bull;                        
+                        <a href="{{ '/blog/' | relative_url }}" class="{% if page.url == '/blog/' %}active{% endif %}">
+                          blog</a> &bull;
+                        <a href="{{ '/projects/' | relative_url }}" class="{% if page.url == '/projects/' %}active{% endif %}">
+                          projects</a> &bull;
+                        <a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}active{% endif %}">
+                          contact</a>
+
+                    </div>
+                    
+                    <div class="nav-right">
+                        <a title="bluesky" href="https://bsky.app/profile/echolevel.co.uk" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bluesky"></i></a> &nbsp;
+                        <a title="github" href="http://github.com/echolevel" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a> &nbsp;
+                        <a title="bandcamp" href="http://syphus.bandcamp.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bandcamp"></i></a>
+                        <a title="blog" href="http://echolevel.tumblr.com"><i class="fa-brands fa-tumblr"></i></a> &nbsp;                                                
+                    </div>
+                </div>
+
+
+                </div>
+
+            {{ content }}
+
+
+          <div class="footer-bar">
+            All content (except for client logos) &copy; Brendan O'Callaghan Ratliff 2025
+          </div>
+
+
+        </div><!-- container end -->
+      </div><!--inner-wrap end -->
+    </div><!--wrap end -->
+
+
+  </body>
+
+
 </html>

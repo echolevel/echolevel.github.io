@@ -1,0 +1,30 @@
+---
+layout: default
+title: blog
+pagination:
+  enabled: true
+---
+
+<ul>
+  {% for post in paginator.posts %}
+    <li>
+      <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+      <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+      <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+    </li>
+  {% endfor %}
+</ul>
+
+<nav class="pagination">
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+      <a href="{{ '/blog/' | relative_url }}">← Newer</a>
+    {% else %}
+      <a href="{{ '/blog/page' | append: paginator.previous_page | append: '/' | relative_url }}">← Newer</a>
+    {% endif %}
+  {% endif %}
+  <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ '/blog/page' | append: paginator.next_page | append: '/' | relative_url }}">Older →</a>
+  {% endif %}
+</nav>

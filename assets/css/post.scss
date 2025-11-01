@@ -1,0 +1,52 @@
+---
+---
+
+@import "variables";
+
+    
+    .postlist {
+        list-style-type:none;
+    }
+
+    hr {
+        border-style:solid;
+        border-width: 0.05rem;
+    }
+
+    pre {
+        padding-left: 1rem;
+        border-left: solid 0.5rem #555;
+    }
+
+    .highlight pre {
+        background: #2e2e2e;
+        color: #dcdcdc;
+        padding: 1em;
+        border-radius: 6px;
+        overflow-x: auto;
+        }
+
+    .highlight .k { color: #569CD6; } /* keyword */
+    .highlight .nf { color: #4EC9B0; } /* function name */
+    .highlight .n { color: #9CDCFE; }  /* identifier */
+
+    p .language-plaintext {
+        background: #2e2e2e;
+        color: #dcdcdc;
+        padding: 0.125rem;
+        border-radius: 6px;
+    }
+
+    table, th, td {
+        background-color: transparent;
+    }
+
+    table {
+        border: solid 1px #333;
+        border-collapse: collapse;
+    }
+
+    th, td{
+        padding: 0.4rem;
+        border: solid 2px #555;
+    }
