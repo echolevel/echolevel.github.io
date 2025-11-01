@@ -54,15 +54,35 @@ title: home
         </div>                   
 
         <div class="section-title">
+            Featured work
+        </div>
+
+        {% assign source = site.works %}
+
+        {% assign pinned    = source | where_exp: "i", "i.pinned != nil" | where_exp: "i", "i.pinned >= 0" %}
+        {% assign unpinned1 = source | where_exp: "i", "i.pinned == nil" %}
+        {% assign unpinned2 = source | where_exp: "i", "i.pinned < 0" %}
+        {% assign unpinned  = unpinned1 | concat: unpinned2 %}
+
+
+        {% assign priorities = pinned | map: "pinned" | uniq | sort %}
+
+        {% for prio in priorities  limit:2 %}
+            {% assign bucket = pinned | where: "pinned", prio | sort: "title" %}
+            {% for it in bucket %}
+                {% include item-preview.html item=it %}
+            {% endfor %}
+        {% endfor %}
+
+        <p><a href="{{ '/work/' | relative_url }}">All work →</a></p>
+
+        <div class="section-title">
             Recent blog posts
         </div>
 
         {% for post in site.posts limit:1 %}
 
-            <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
-            <small>{{ post.date | date: "%Y-%m-%d" }}</small>
-            <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
-            <a href="{{ post.url | relative_url }}">Read more →</a>
+            {% include item-preview.html item=post %}            
             
         {% endfor %}
 

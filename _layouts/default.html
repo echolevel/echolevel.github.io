@@ -1,94 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }} - {{ site.title }}</title>
-  <!--
-  <style>
-    body {
-    font-size: 16px;
-    width: 850px;
-    margin: 0 auto;
-    font-family: system-ui, sans-serif;
-    background-color: #fcfcfc;
-    }
+    <meta charset="UTF-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
-    h1,h2,h3,h4,h5{
-        color: #333;
-    }
-
-    a {
-        color: #444;
-    }
-
-    a:hover 
-    {
-        color: #666;
-    }
-
-    ul {
-        list-style-type:square;
-    }
-
-    .postlist {
-        list-style-type:none;
-    }
-
-    hr {
-        border-style:solid;
-        border-width: 0.05rem;
-    }
-
-    pre {
-        padding-left: 1rem;
-        border-left: solid 0.5rem #555;
-    }
-
-    .highlight pre {
-        background: #1e1e1e;
-        color: #dcdcdc;
-        padding: 1em;
-        border-radius: 6px;
-        overflow-x: auto;
-        }
-
-    .highlight .k { color: #569CD6; } /* keyword */
-    .highlight .nf { color: #4EC9B0; } /* function name */
-    .highlight .n { color: #9CDCFE; }  /* identifier */
-
-    p .language-plaintext {
-        background: #1e1e1e;
-        color: #dcdcdc;
-        padding: 0.125rem;
-        border-radius: 6px;
-    }
-
-    table {
-        border: solid 1px #333;
-        border-collapse: collapse;
-    }
-
-    th, td{
-        padding: 0.4rem;
-        border: solid 2px #555;
-    }
-
-
-
-  </style>-->
-  
-    <link rel="icon"
-      type="image/png"
-      href="assets/img/favicon.png">
-
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-{% if page.layout == "post" %}
-  <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
-{% endif %}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% if page.layout == "post" %}
+    <link rel="stylesheet" href="{{ '/assets/css/post.css' | relative_url }}">
+    {% endif %}
+    {% if page.custom_css%}
+        <link rel="stylesheet" href="{{ '/assets/css/' | append: page.custom_css | relative_url }}">
+    {% endif %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
-
-
 
 <body>
 
@@ -101,32 +26,26 @@
 
         <div class="container">
 
-            <div class="section head-section">
-            
+            <div class="section head-section">            
               <!--<img class="avatar-image" src="{{ '/assets/img/echo_av.jpg' | relative_url }}" alt="profile photo"/>-->
-
-              
-                                          
-          
             </div>
           
             <br/>
 
-            
             <div class="section">
-                    
-
                 <div class="nav-bar">
                     <div class="nav-left">
 
                         <div class="titletext"><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">
                           {{ site.title }}</a></div>&bull;
-                        <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">
-                          about</a> &bull;                        
+                        <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">
+                          home</a> &bull;                        
+                        <a href="{{ '/skills/' | relative_url }}" class="{% if page.url == '/skills/' %}active{% endif %}">
+                          skills</a> &bull;                        
+                        <a href="{{ '/works/' | relative_url }}" class="{% if page.url == '/works/' %}active{% endif %}">
+                          works</a> &bull;
                         <a href="{{ '/blog/' | relative_url }}" class="{% if page.url == '/blog/' %}active{% endif %}">
-                          blog</a> &bull;
-                        <a href="{{ '/projects/' | relative_url }}" class="{% if page.url == '/projects/' %}active{% endif %}">
-                          projects</a> &bull;
+                          blog</a> &bull;                        
                         <a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}active{% endif %}">
                           contact</a>
 
@@ -141,10 +60,11 @@
                 </div>
 
 
-                </div>
+            </div>
 
+            <div class="section {{ page.title | downcase }}">
             {{ content }}
-
+            </div>
 
           <div class="footer-bar">
             All content (except for client logos) &copy; Brendan O'Callaghan Ratliff 2025

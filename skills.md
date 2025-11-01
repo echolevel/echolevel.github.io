@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "about"
-permalink: /about/
+title: "Skills"
+permalink: /skills/
 ---
 
 Coming from a family of musicians and continuing a lineage of Irish traditional fiddle playing

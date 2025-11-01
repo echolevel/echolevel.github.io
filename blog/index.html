@@ -3,17 +3,20 @@ layout: default
 title: blog
 pagination:
   enabled: true
+paginate: 10                      # posts per page
+paginate_path: "/blog/page:num/"  # URLs like /blog/page2/
 ---
 
-<ul>
-  {% for post in paginator.posts %}
-    <li>
-      <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
-      <small>{{ post.date | date: "%Y-%m-%d" }}</small>
-      <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
-    </li>
-  {% endfor %}
-</ul>
+{% assign pinned = paginator.posts | where_exp: "item", "item.pinned == true" | sort: "title" %}
+{% assign others = paginator.posts | where_exp: "item", "item.pinned != true" | sort: "title" %}
+{% assign sorted = pinned | concat: others %}
+
+{% for post in sorted %}
+
+    {% include item-preview.html item=post %}            
+    
+{% endfor %}
+
 
 <nav class="pagination">
   {% if paginator.previous_page %}

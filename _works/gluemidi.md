@@ -1,8 +1,10 @@
 ---
-layout: project
+layout: post
+type: work
 title: "GlueMidi"
 description: "A MIDI routing app"
-repo: "echolevel/gluemidi"
+external_url: "https://github.com/echolevel/gluemidi"
+output: false # Don't generate an URL stub for this - just link directly to external_url from projects index
 image: 
 ---
 

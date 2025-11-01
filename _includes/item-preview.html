@@ -1,0 +1,68 @@
+{%- comment -%}
+  _includes/item-preview.html
+  Expected input:
+    include.item → the post/project object
+{%- endcomment -%}
+
+{% assign src = nil %}
+
+{% assign i = include.item %}
+
+<article class="item">
+  <h4 class="item-title">
+    <!-- If the URL is external, show the FA icon and open in a new window/tab -->
+    <a href="{{ i.external_url | default: i.url | relative_url }}" {% if i.external_url and i.output != true %}target="_blank" rel="noopener"{% endif %}>
+        {{ i.title }}
+
+        {% if i.external_url and i.output != true  %}
+        <sup><i class="fa fa-external-link" aria-hidden="true" ></i></sup>
+        {% endif %}
+    </a>
+    
+  </h4>
+
+    {% if i.showmediapreview == true %}
+        {% if i.image or i.external_image %}
+            
+                {% assign imgsrc = i.image | default: i.external_image %}    
+                <a href="#img{{ forloop.index }}">
+                    <img src="{{ imgsrc | relative_url }}" alt="{{ i.title }}" class="item-thumb" alt="Metron thumbnail">
+                </a>
+
+                <a href="#_" class="lightbox" id="img{{ forloop.index }}">
+                <img src="{{ imgsrc | relative_url }}" alt="{{ i.title }}">
+                </a>
+        {% endif %}
+
+        {% if i.youtube.playlist %}
+            {% assign src = "https://www.youtube-nocookie.com/embed/videoseries?list=" | append: i.youtube.playlist %}
+        {% elsif i.youtube.id %}
+            {% assign src = "https://www.youtube-nocookie.com/embed/" | append: i.youtube.id %}
+        {% endif %}    
+
+        {% if src %}
+        <div class="video-container">
+            <iframe 
+            width="560" height="315"
+            src="{{ src }}" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+            </iframe>
+        </div>
+        {% endif %}
+
+    {% endif %}
+
+  {% if i.description %}
+    <p class="item-desc">{{ i.description }}</p>
+  {% else %}
+    <p class="item-desc">{{ i.excerpt | strip_html | truncate: 160 }}</p>
+  {% endif %}
+
+  <!--Only show date on blog post items-->
+  {% if i.collection == "posts" %}
+    <p class="item-date">Posted on {{ i.date | date: "%Y-%m-%d" }}</p>
+  {% endif %}
+</article>

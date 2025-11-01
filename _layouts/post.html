@@ -1,9 +1,45 @@
 ---
 layout: default
-css: post
 ---
-<article>
+<article class="post">
   <h3>{{ page.title }}</h3>
-  <p><small>{{ page.date | date_to_long_string }}</small></p>
-  {{ content }}
+  
+  <!--Only show date on blog post items-->
+    {% if page.date and page.layout == "post" %}
+        <p class="item-date">Posted on {{ page.date | date_to_long_string }}</p>
+    {% endif %}
+
+    {% if page.image or page.external_image %}
+        {% assign imgsrc = page.image | default: page.external_image %}    
+        <a href="#img{{ forloop.index }}">
+            <img src="{{ imgsrc | relative_url }}" alt="{{ page.title }}" class="item-thumb" alt="Metron thumbnail">
+        </a>
+
+        <a href="#_" class="lightbox" id="img{{ forloop.index }}">
+        <img src="{{ imgsrc | relative_url }}" alt="{{ page.title }}">
+        </a>
+    {% endif %}
+
+    {% if page.youtube.playlist %}
+        {% assign src = "https://www.youtube-nocookie.com/embed/videoseries?list=" | append: page.youtube.playlist %}
+    {% elsif page.youtube.id %}
+        {% assign src = "https://www.youtube-nocookie.com/embed/" | append: page.youtube.id %}
+    {% endif %}
+
+    {% if src %}
+    <div class="video-container">
+        <iframe 
+        width="560" height="315"
+        src="{{ src }}" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+        </iframe>
+    </div>
+    {% endif %}
+
+    {{ content }}
+
+    
 </article>
