@@ -33,7 +33,8 @@ I also step in as a gameplay programmer and build engineer when required.
         
             
 - Degree: BA (Hons) in English Literature & Music, Newcastle University (2004)            
-- Degree: MA (with Distinction) in Music, Newcastle University (2006)            
+
+- Degree: MA (with Distinction) in Music, Newcastle University (2006)
 - From 2008 to 2010 I worked at Newcastle University's Culture Lab, supporting and tutoring on its MRes degree course in Digital Media and gaining experience in 
 software and hardware development, workshop fabrication, video production, interactive art installations and studio engineering.
             
@@ -95,23 +96,4 @@ I'm not taking on new web development work right now, but I still maintain apps 
         
 A complete archive of my chiptune and demoscene music is available at <a href="https://syphus-mods.github.io">syphus-mods.github.io</a>.
         
-
-        
-#### Open source software and hardware projects:        
-        
-
-My <a title="github" href="http://github.com/echolevel" target="_blank" rel="noopener noreferrer">GitHub</a> 
-is where you can find my open-source software and hardware projects, such as:
-                        
-- <a href="https://github.com/echolevel/GlueMidi">GlueMidi</a> - a MIDI routing taskbar app for Windows
-
-- <a href="https://github.com/echolevel/Fcp2Rpp">Fcp2Rpp</a> - converts Final Cut Pro and DaVinci Resolve XML to Reaper projects
-
-- <a href="https://github.com/echolevel/Fader3">Fader3</a> - schematics, 3D printer STLs and accompanying config app for a long-throw, 3-fader 14bit MIDI controller of my own design
-
-- <a href="https://github.com/echolevel/AmigaPal">AmigaPal</a> - a sample converter for preparing audio samples to use on Amiga 
-- <a href="https://github.com/echolevel/open-amiga-sampler">Open Amiga Sampler</a> - schematics, PCB design and STLs to produce a low cost, high quality version of the classic parallel-port Amiga 8bit audio sampler cartridge (with my pal mnstrmnch)
-
-Lots of small, handy things such as Ableton control scripts, Roli Lightpad apps, 
-Commodore Amiga-related stuff, and fun older projects that...might still work
 

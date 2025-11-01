@@ -6,4 +6,4 @@ repo: "echolevel/gluemidi"
 image: 
 ---
 
-Route MIDI messages from multiple hardware or virtual ports to a single output device or port.
+A MIDI routing taskbar app for Windows that routes MIDI messages from multiple hardware or virtual ports to a single output device or port.
