@@ -8,7 +8,7 @@ tags: []
 image:
 external_image:
 youtube:
-pinned: false
+pinned: -1
 ---
 
 This is a placeholder while I test GitHub Pages as a blogging platform. 

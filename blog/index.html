@@ -7,14 +7,26 @@ paginate: 10                      # posts per page
 paginate_path: "/blog/page:num/"  # URLs like /blog/page2/
 ---
 
-{% assign pinned = paginator.posts | where_exp: "item", "item.pinned == true" | sort: "title" %}
-{% assign others = paginator.posts | where_exp: "item", "item.pinned != true" | sort: "title" %}
-{% assign sorted = pinned | concat: others %}
+{% assign posts = paginator.posts %}
 
-{% for post in sorted %}
+{% assign pinned    = posts | where_exp: "i", "i.pinned != nil" | where_exp: "i", "i.pinned >= 0" %}
+{% assign unpinned1 = posts | where_exp: "i", "i.pinned == nil" %}
+{% assign unpinned2 = posts | where_exp: "i", "i.pinned < 0" %}
+{% assign unpinned  = unpinned1 | concat: unpinned2 %}
 
-    {% include item-preview.html item=post %}            
-    
+{% assign priorities = pinned | map: "pinned" | uniq | sort %}
+
+{% for prio in priorities %}
+  {% assign bucket = pinned | where: "pinned", prio | sort: "date" | reverse %}
+  {% for it in bucket %}
+    {% include item-preview.html item=it %}
+  {% endfor %}
+{% endfor %}
+
+
+{% assign others_sorted = unpinned | sort: "date" | reverse %}
+{% for it in others_sorted %}
+  {% include item-preview.html item=it %}
 {% endfor %}
 
 

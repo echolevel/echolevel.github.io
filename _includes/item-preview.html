@@ -21,6 +21,18 @@
     
   </h4>
 
+    {% if i.description %}
+    <p class="item-desc">{{ i.description }}</p>
+  {% else %}
+    <p class="item-desc">{{ i.excerpt | strip_html | truncate: 160 }}</p>
+  {% endif %}
+
+    {% if i.type == "blog" or i.output != false %}
+        {% unless i.external_url %}
+            <a href="{{ i.url | relative_url }}">Read more...</a>
+        {% endunless %}
+    {% endif %}
+
     {% if i.showmediapreview == true %}
         {% if i.image or i.external_image %}
             
@@ -55,11 +67,9 @@
 
     {% endif %}
 
-  {% if i.description %}
-    <p class="item-desc">{{ i.description }}</p>
-  {% else %}
-    <p class="item-desc">{{ i.excerpt | strip_html | truncate: 160 }}</p>
-  {% endif %}
+  
+
+  
 
   <!--Only show date on blog post items-->
   {% if i.collection == "posts" %}

@@ -10,5 +10,5 @@ external_image:
 youtube:
     id: e4vkSAM88Po
     playlist:
-showmediapreview: false # Don't display image or video in item-preview, even if present
+showmediapreview: true # Don't display image or video in item-preview, even if present
 ---

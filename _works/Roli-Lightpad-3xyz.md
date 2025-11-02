@@ -8,5 +8,5 @@ output: false # Don't generate an URL stub for this - just link directly to exte
 image: 
 youtube:
     id: nKlzh_Y45N4
-showmediapreview: false # Don't display image or video in item-preview, even if present
+showmediapreview: true # Don't display image or video in item-preview, even if present
 ---

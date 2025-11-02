@@ -9,5 +9,5 @@ image:
 external_image:
 youtube:
     id: PnvKsf_k3AM    
-showmediapreview: false # Don't display image or video in item-preview, even if present
+showmediapreview: true # Don't display image or video in item-preview, even if present
 ---
