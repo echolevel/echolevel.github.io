@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Skills"
-permalink: /skills/
+title: "About"
+permalink: /about/
 ---
 
-#### Current
+#### About
 
 - I'm a director at <a href="https://cardboardsword.co.uk/" target="_blank" rel="noopener noreferrer">Cardboard Sword</a>
 where our contract clients include Epic Games, Playground Games, Coatsink, Rivet Games and Critical Failure Studio.
@@ -28,7 +28,7 @@ including the forthcoming game Transmission. While skilled in various game engin
 #### Background
 
 Coming from a family of musicians and continuing a lineage of Irish traditional fiddle playing
-from the age of 6, I also learned classical violin and piano before teaching myself various
+from a young age, I also learned classical violin and piano before teaching myself various
 other instruments in my teens and beyond - guitar, bass, flute, English and Anglo concertina, bouzouki and banjo. Since then I've been performing,
 recording and composing professionally as well as producing <a href="https://syphus-mods.github.io">8-bit/chiptune music in the demoscene
 under the name Syphus since the early 1990s</a>. In the 2000s when chipmusic finally became cool enough
@@ -52,8 +52,7 @@ I also step in as a gameplay programmer and build engineer when required.
             
 
 #### Experience & Academic history
-        
-            
+
 - Degree: BA (Hons) in English Literature & Music, Newcastle University (2004)            
 - Degree: MA (with Distinction) in Music, Newcastle University (2006)
 - From 2008 to 2010 I worked at Newcastle University's Culture Lab, supporting and tutoring on its MRes degree course in Digital Media and gaining experience in 
@@ -68,3 +67,4 @@ King's College London, Newcastle University, the Great North Children's Hospital
 - Before entering the games industry proper, I gained a lot of experience in other film sound 
 disciplines - Foley, sound design, scoring, dubbing and mixing - by collaborating with local 
 film makers alongside my freelance location sound and audio post work.
+
