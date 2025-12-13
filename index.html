@@ -8,9 +8,8 @@ title: home
               
         I'm also Audio Director at <a target="_blank" rel="noopener noreferrer" href="https://cardboardsword.co.uk/">Cardboard Sword</a>
         where we've just released 
-        <a href="https://store.steampowered.com/app/653060/The_Siege_and_the_Sandfox/" target="_blank">The Siege and The Sandfox</a> and 
-        are working on the forthcoming game
-        <a href="https://store.steampowered.com/app/509950/Transmission/" target="_blank">Transmission</a>.     
+        <a href="https://store.steampowered.com/app/653060/The_Siege_and_the_Sandfox/" target="_blank">The Siege and The Sandfox</a> and         
+        <a href="https://www.meta.com/en-gb/experiences/transmission-shortwave/3547956195215144/" target="_blank">Transmission: Shortwave</a>.     
 
         <div class="section-title" id="skills">
             I specialise in:
@@ -67,7 +66,7 @@ title: home
 
         {% assign priorities = pinned | map: "pinned" | uniq | sort %}
 
-        {% for prio in priorities  limit:2 %}
+        {% for prio in priorities  limit:3 %}
             {% assign bucket = pinned | where: "pinned", prio | sort: "title" %}
             {% for it in bucket %}
                 {% include item-preview.html item=it %}

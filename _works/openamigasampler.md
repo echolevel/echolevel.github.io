@@ -9,5 +9,5 @@ image:
 youtube:
     id: X3AKhhrNjcA
 showmediapreview: true # Don't display image or video in item-preview, even if present    
-pinned: 3
+pinned: 4
 ---
