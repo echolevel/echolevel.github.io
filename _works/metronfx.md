@@ -25,4 +25,4 @@ should hopefully be reflected in the low CPU usage of this plugin in your DAW.
 
 Windows only for now, but soon I'll set up a MacOS build chain and make an AU installer.
 
-[Download MetronFX 1.2.2 beta installer](assets/downloads/MetronFX-windows.1.2.2.beta.exe)
+[Download MetronFX 1.2.2 beta installer](/assets/downloads/MetronFX-windows.1.2.2.beta.exe)
