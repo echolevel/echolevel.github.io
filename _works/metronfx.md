@@ -23,7 +23,38 @@ Since Metron isn't quite ready for public release yet, this is a little taste of
 should hopefully be reflected in the low CPU usage of this plugin in your DAW. I find it rarely creeps above 4% of RT CPU budget usage 
 in Reaper with an armed external guitar input and all the most 'expensive' options ticked. That's on a Ryzen 7 5800X; please let me know on Bsky if your experience is wildly different! 
 
-Windows only for now, but soon I'll set up a MacOS build chain and make an AU installer. (The usual disclaimer: this software is free, 'as-is', author
-accepts no liability for anything you do with it and offers no warranty against anything going wrong. Copyright 2025 Brendan O'Callaghan Ratliff and Cardboard Sword, all rights reserved.)
 
-**[Download MetronFX 1.2.2 beta installer](/assets/downloads/MetronFX-windows.1.2.2.beta.exe)**
+
+
+
+## Disclaimer: 
+This software is free, 'as-is', author
+accepts no liability for anything you do with it and offers no warranty against anything going wrong. Copyright 2025 Brendan O'Callaghan Ratliff and Cardboard Sword, all rights reserved.
+
+## Downloads
+
+**[Download MetronFX 1.2.2 beta VST3 installer for Windows](/assets/downloads/MetronFX-windows.1.2.2.beta.exe)**
+
+**[Download MetronFX 1.2.2 beta VST3 and AU for MacOS (NOT notarised)](/assets/downloads/MetronFX_MacOS_1.2.2.beta.zip)**
+
+## macOS notes
+
+The MacOS version is NOT notarised/code-signed, because I'm not paying Apple $99 just so I can give away free software. This means you might have to employ some workarounds, which I've attempted to describe below. Bear in mind that the only Mac hardware I have is a 2015 MBP - probably Apple's last great laptop, but distinctly long in the tooth. I can build and run MetronFX on it, but I can't promise that modern Apple Silicon machines will manage it.
+
+1. Install the plugin - copy VST3 to `~/Library/Audio/Plug-Ins/VST3/`, or AU to `~/Library/Audio/Plug-Ins/Components/`
+2. If macOS blocks it, remove the quarantine flag:
+
+```
+xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/MetronFX.vst3
+# or:
+sudo xattr -dr com.apple.quarantine /Library/Audio/Plug-Ins/VST3/MetronFX.vst3
+```
+
+```
+xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/MetronFX.component
+# or:
+sudo xattr -dr com.apple.quarantine /Library/Audio/Plug-Ins/Components/MetronFX.component
+```
+3. If it's still blocked, go to System Settings -> Privacy & Security, and look for something like 'Allow Anyway'. Click it, then reeopen your DAW and rescan.
+
+Note: if you download the zip using Safari, the zip itself might get quarantined. If so, use the `xattr` command above to remove the flag.
