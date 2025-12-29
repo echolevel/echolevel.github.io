@@ -27,19 +27,21 @@ in Reaper with an armed external guitar input and all the most 'expensive' optio
 
 
 
-## Disclaimer: 
+### Disclaimer: 
 This software is free, 'as-is', author
 accepts no liability for anything you do with it and offers no warranty against anything going wrong. Copyright 2025 Brendan O'Callaghan Ratliff and Cardboard Sword, all rights reserved.
 
-## Downloads
+### Downloads
 
 **[Download MetronFX 1.2.2 beta VST3 installer for Windows](/assets/downloads/MetronFX-windows.1.2.2.beta.exe)**
 
 **[Download MetronFX 1.2.2 beta VST3 and AU for MacOS (NOT notarised)](/assets/downloads/MetronFX_MacOS_1.2.2.beta.zip)**
 
-## macOS notes
+### macOS notes
 
-The MacOS version is NOT notarised/code-signed, because I'm not paying Apple $99 just so I can give away free software. This means you might have to employ some workarounds, which I've attempted to describe below. Bear in mind that the only Mac hardware I have is a 2015 MBP - probably Apple's last great laptop, but distinctly long in the tooth. I can build and run MetronFX on it, but I can't promise that modern Apple Silicon machines will manage it.
+The MacOS version is NOT notarised/code-signed, because I'm not paying Apple $99 just so I can give away free software. This means you might have to employ some workarounds, which I've attempted to describe below. Try these _at your own risk_ - if you're not comfortable with the command line, maybe give it a miss. 
+
+Also bear in mind that the only Mac hardware I have is a 2015 MBP - probably Apple's last great laptop, but distinctly long in the tooth. I can build and run MetronFX on it, but I can't promise that it'll behave on modern Apple Silicon (M1 etc).
 
 1. Install the plugin - copy VST3 to `~/Library/Audio/Plug-Ins/VST3/`, or AU to `~/Library/Audio/Plug-Ins/Components/`
 2. If macOS blocks it, remove the quarantine flag:
