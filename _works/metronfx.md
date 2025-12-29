@@ -47,16 +47,15 @@ Also bear in mind that the only Mac hardware I have is a 2015 MBP - probably App
 2. If macOS blocks it, remove the quarantine flag:
 
 ```
-xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/MetronFX.vst3
-# or:
-sudo xattr -dr com.apple.quarantine /Library/Audio/Plug-Ins/VST3/MetronFX.vst3
+sudo xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/MetronFX.vst3
 ```
+or:
+```
+sudo xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/MetronFX.component
+```
+depending on where you installed it.
 
-```
-xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/Components/MetronFX.component
-# or:
-sudo xattr -dr com.apple.quarantine /Library/Audio/Plug-Ins/Components/MetronFX.component
-```
-3. If it's still blocked, go to System Settings -> Privacy & Security, and look for something like 'Allow Anyway'. Click it, then reeopen your DAW and rescan.
+3. If it's still blocked, go to System Settings -> Privacy & Security, look for something like 'Allow Anyway', and click it (this might be pointless, since a VST is binary code but _not_ an Application). 
+4. Reeopen your DAW and rescan.
 
-Note: if you download the zip using Safari, the zip itself might get quarantined. If so, use the `xattr` command above to remove the flag.
+Note: if you download the zip using Safari, the zip itself might get quarantined. If so, use the `xattr` command above to remove the flag. See the comments under [this post](https://www.osirisguitar.com/2020/04/01/how-to-make-unsigned-vsts-work-in-macos-catalina/) for more info (thanks, [Peter Swimm](https://bsky.app/profile/peterswimm.com/post/3mb4yllciw22q)!)
