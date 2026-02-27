@@ -17,3 +17,5 @@ collections:
   posts:
     output: true
     permalink: /blog/:name/
+plugins:
+  - jekyll-feed

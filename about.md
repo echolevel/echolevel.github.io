@@ -4,28 +4,30 @@ title: "About"
 permalink: /about/
 ---
 
-#### About
+### About
 
-- I'm a director at <a href="https://cardboardsword.co.uk/" target="_blank" rel="noopener noreferrer">Cardboard Sword</a>
+I'm a director at <a href="https://cardboardsword.co.uk/" target="_blank" rel="noopener noreferrer">Cardboard Sword</a>
 where our contract clients include Epic Games, Playground Games, Coatsink, Rivet Games and Critical Failure Studio.
 We recently shipped The Siege and The Sandfox, our own-IP 2D stealth metroidvania; and the retrofuturistic VR parcel courier driving game Transmission: Shortwave, set in '90s Britain to a jungle/drum and bass soundtrack; and we're working on multiple other original properties
 and third-party projects. While skilled in various game engines and pipelines, we specialise in Unreal Engine.
 
-    I've been with Cardboard Sword since 2017 and my responsibilities include:
+I've been with Cardboard Sword since 2017 and my responsibilities include:
             
-    - All aspects of the audio creation, production and implementation pipeline, including instrumentation; recording; 
-    production; mixing; gameplay systems in Blueprint and C++; performance-critical realtime audio DSP in C++ for desktop, 
-    mobile and console platforms
-    - General C++ and Blueprint development as required, including gameplay systems, in-house tooling, debug utilities, performance metrics, etc.            
-    - Build engineering (VS, Perforce, TeamCity, desktop and mobile build automation, etc.)
+- All aspects of the audio creation, production and implementation pipeline, including instrumentation; recording; 
+production; mixing; gameplay systems in Blueprint and C++; performance-critical realtime audio DSP in C++ for desktop, 
+mobile and console platforms
+- General C++ and Blueprint development as required, including gameplay systems, in-house tooling, debug utilities, performance metrics, etc.            
+- Build engineering (VS, Perforce, TeamCity, desktop and mobile build automation, etc.)
 
-- I also still have some availability for film and TV location sound recording work and can 
+I also offer audio post production for film, TV, commercials, podcasts and radio, as well as on-location Foley and VO recording.
+
+I still have some availability for film and TV location sound recording work and can 
   supply my own kit including: Sound Devices 633 recorder; Zoom backup and drop-bag recorders; SQN mixers; microphones by Neumann, Sennheiser, Audix, Sanken, Oktava, Tram, OST and LOM; 4 channels of radio (PMSE licensed); wired and wireless client listen solutions; timecode; full insurance (PLI and PII) and clean UK driving license 
                 
-- I also offer audio post production for film, TV, commercials, podcasts and radio, as well as on-location Foley and VO recording.
+
 
             
-#### Background
+### Background
 
 Coming from a family of musicians and continuing a lineage of Irish traditional fiddle playing
 from a young age, I also learned classical violin and piano before teaching myself various
@@ -51,7 +53,7 @@ sound design production and implementation.
 I also step in as a gameplay programmer and build engineer when required.
             
 
-#### Experience & Academic history
+### Experience & Academic history
 
 - Degree: BA (Hons) in English Literature & Music, Newcastle University (2004)            
 - Degree: MA (with Distinction) in Music, Newcastle University (2006)

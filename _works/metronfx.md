@@ -3,13 +3,12 @@ type: work
 layout: post
 title: "MetronFX"
 description: "MetronFX: free VST3 distortion and reverb effect"
-external_url:
 output: true # Don't generate an URL stub for this - just link directly to external_url from projects index
 youtube: 
     id: 
-image: "assets/img/metronfx-screenshot.png"
+image: "assets/img/metronfx-screenshot2.png"
 showmediapreview: true # Don't display image or video in item-preview, even if present
-pinned: 1
+pinned: -1
 ---
 
 MetronFX is a free VST3 effect plugin that allows some of the insert/buss effects from Metron Tracker to be used in a DAW.

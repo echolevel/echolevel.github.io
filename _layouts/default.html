@@ -13,6 +13,10 @@
         <link rel="stylesheet" href="{{ '/assets/css/' | append: page.custom_css | relative_url }}">
     {% endif %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="alternate" type="application/atom+xml"
+      title="{{ site.title }}"
+      href="{{ '/feed.xml' | relative_url }}">
 </head>
 
 <body>
@@ -34,8 +38,8 @@
 
             <div class="section">
                 <div class="nav-bar">
-                    <div class="nav-left">
 
+                    <div class="nav-left">
                         <div class="titletext"><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">
                           {{ site.title }}</a></div>&bull;
                         <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">
@@ -48,15 +52,9 @@
                           blog</a> &bull;                        
                         <a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}active{% endif %}">
                           contact</a>
-
                     </div>
                     
-                    <div class="nav-right">
-                        <a title="bluesky" href="https://bsky.app/profile/echolevel.co.uk" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bluesky"></i></a> &nbsp;
-                        <a title="github" href="http://github.com/echolevel" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a> &nbsp;
-                        <a title="bandcamp" href="http://syphus.bandcamp.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-bandcamp"></i></a>
-                        <a title="blog" href="http://echolevel.tumblr.com"><i class="fa-brands fa-tumblr"></i></a> &nbsp;                                                
-                    </div>
+                    
                 </div>
 
 

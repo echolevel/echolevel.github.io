@@ -3,8 +3,7 @@ layout: post
 type: work
 title: "Syphus - chiptune/demoscene music"
 description: "An archive of decades' worth of my chiptune/demoscene music"
-external_url:
-output: true # Don't generate an URL stub for this - just link directly to external_url from projects index
+output: true
 youtube: 
     id: a1FC2l_5QYI
     playlist: PLJTg89-ZF-3nfnyxbLRILsBdbRrlTMlau

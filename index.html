@@ -73,19 +73,6 @@ title: home
             {% endfor %}
         {% endfor %}
 
-        <p><a href="{{ '/works/' | relative_url }}">All work →</a></p>
-
-        <div class="section-title">
-            Recent blog posts
-        </div>
-
-        {% for post in site.posts limit:1 %}
-
-            {% include item-preview.html item=post %}            
-            
-        {% endfor %}
-
-        <p><a href="{{ '/blog/' | relative_url }}">All blog posts →</a></p>
 
 
     </div><!-- section end -->

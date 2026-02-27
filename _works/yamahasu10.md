@@ -3,8 +3,7 @@ layout: post
 type: work
 title: "Yamaha SU-10"
 description: "Music made with the SU-10"
-external_url: 
-output: true # Don't generate an URL stub for this - just link directly to external_url from projects index
+output: true
 image: 
 external_image:
 youtube:
