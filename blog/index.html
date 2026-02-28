@@ -7,6 +7,8 @@ paginate: 10                      # posts per page
 paginate_path: "/blog/page:num/"  # URLs like /blog/page2/
 ---
 
+<h4>Blog <a title="subscribe to RSS feed" href="/feed.xml"><i class="fa fa-rss"></i></a> </h4>
+
 {% assign posts = paginator.posts %}
 
 {% assign pinned    = posts | where_exp: "i", "i.pinned != nil" | where_exp: "i", "i.pinned >= 0" %}
