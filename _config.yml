@@ -19,3 +19,4 @@ collections:
     permalink: /blog/:name/
 plugins:
   - jekyll-feed
+timezone: Europe/London

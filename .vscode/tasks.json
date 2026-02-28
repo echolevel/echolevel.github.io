@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "New Jekyll post (Python)",
+      "type": "shell",
+      "command": "py",
+      "args": [
+        "${workspaceFolder}/scripts/new_post.py",
+        "\"${input:postTitle}\"",
+        "--open"
+      ],
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "postTitle",
+      "type": "promptString",
+      "description": "Post title",
+      "default": "New post"
+    }
+  ]
+}
