@@ -21,25 +21,9 @@
 
 <body>
 
-    <div class="wrap">
-      <div class="innerwrap">
-
-        <div class="top-bar">
-
-        </div>
-
-        <div class="container">
-
-            <div class="section head-section">            
-              <!--<img class="avatar-image" src="{{ '/assets/img/echo_av.jpg' | relative_url }}" alt="profile photo"/>-->
-            </div>
-          
-            <br/>
-
-            <div class="section">
-                <div class="nav-bar">
-
-                    <div class="nav-left">
+    <div class="top-bar">
+        <div class="nav-bar">
+            <div class="nav-left">
                         <div class="titletext"><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">
                           {{ site.title }}</a></div> 
                         <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">
@@ -53,12 +37,17 @@
                         <a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}active{% endif %}">
                           contact</a>
                     </div>
-                    
-                    
-                </div>
-
-
             </div>
+        </div>
+
+    <div class="wrap">
+        
+
+      <div class="innerwrap">
+
+        
+
+        <div class="container">            
 
             <div class="section {{ page.title | downcase }}">
             {{ content }}
@@ -74,6 +63,16 @@
     </div><!--wrap end -->
 
 
+<script>
+  const topBar = document.querySelector('.top-bar');
+
+  function updateTopBarShadow() {
+    topBar.classList.toggle('scrolled', window.scrollY > 0);
+  }
+
+  window.addEventListener('scroll', updateTopBarShadow, { passive: true });
+  updateTopBarShadow(); // set initial state on load
+</script>
   </body>
 
 

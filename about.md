@@ -6,7 +6,7 @@ permalink: /about/
 
 #### About
 
-I'm **Brendan O'Callaghan Ratliff**, a director at <a href="https://cardboardsword.co.uk/" target="_blank" rel="noopener noreferrer">Cardboard Sword</a>
+I'm **Brendan O'Callaghan Ratliff**, a director at <a href="https://cardboardsword.co.uk/" target="_blank" rel="noopener noreferrer">**Cardboard Sword**</a>
 where our contract clients include Epic Games, Playground Games, Coatsink, Rivet Games and Critical Failure Studio.
 We recently shipped The Siege and The Sandfox, our own-IP 2D stealth metroidvania; and the retrofuturistic VR parcel courier driving game Transmission: Shortwave, set in '90s Britain to a jungle/drum and bass soundtrack. Currently we're working on multiple other original properties
 and third-party projects. While skilled in various game engines and pipelines, we specialise in Unreal Engine 5.

@@ -16,6 +16,11 @@
     
   </h3>
 
+<!--Only show date on blog post items-->
+  {% if i.collection == "posts" %}
+    <p class="item-date">Posted on {{ i.date | date: "%Y-%m-%d" }}</p>
+  {% endif %}
+
     {% if i.description %}
     <p class="item-desc">{{ i.description }}</p>
   {% else %}
@@ -61,8 +66,5 @@
     {% endif %}
   
 
-  <!--Only show date on blog post items-->
-  {% if i.collection == "posts" %}
-    <p class="item-date">Posted on {{ i.date | date: "%Y-%m-%d" }}</p>
-  {% endif %}
+  
 </article>
