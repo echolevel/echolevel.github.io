@@ -1,6 +1,7 @@
 ---
 layout: default
 title: home
+custom_css: home.css
 ---
 
     <div class="section">
@@ -31,7 +32,31 @@ title: home
             </li>            
         </ul>
 
-        
+        <div class="section-title">
+            Featured work:
+        </div>
+
+        <div class="items-container">
+                
+            {% assign source = site.works %}
+
+            {% assign pinned    = source | where_exp: "i", "i.pinned != nil" | where_exp: "i", "i.pinned >= 0" %}
+            {% assign unpinned1 = source | where_exp: "i", "i.pinned == nil" %}
+            {% assign unpinned2 = source | where_exp: "i", "i.pinned < 0" %}
+            {% assign unpinned  = unpinned1 | concat: unpinned2 %}
+
+
+            {% assign priorities = pinned | map: "pinned" | uniq | sort %}
+
+
+            {% for prio in priorities  limit:2 %}
+                {% assign bucket = pinned | where: "pinned", prio | sort: "title" %}
+                {% for it in bucket %}
+                    {% include item-preview.html item=it %}
+                {% endfor %}
+            {% endfor %}
+        </div>        
+
         <div class="section-title" id="clients">
             Freelance clients include:
         </div>            
@@ -53,29 +78,10 @@ title: home
                         
         </div>                   
 
-        <div class="section-title">
-            Featured work:
-        </div>
-
-        
-        {% assign source = site.works %}
-
-        {% assign pinned    = source | where_exp: "i", "i.pinned != nil" | where_exp: "i", "i.pinned >= 0" %}
-        {% assign unpinned1 = source | where_exp: "i", "i.pinned == nil" %}
-        {% assign unpinned2 = source | where_exp: "i", "i.pinned < 0" %}
-        {% assign unpinned  = unpinned1 | concat: unpinned2 %}
 
 
-        {% assign priorities = pinned | map: "pinned" | uniq | sort %}
 
 
-        {% for prio in priorities  limit:2 %}
-            {% assign bucket = pinned | where: "pinned", prio | sort: "title" %}
-            {% for it in bucket %}
-                {% include item-preview.html item=it %}
-            {% endfor %}
-        {% endfor %}
-        
 
 
     </div><!-- section end -->

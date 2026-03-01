@@ -6,7 +6,7 @@ description: "Our stealth metroidvania game, released in early 2025"
 output: true
 youtube: 
     id: Wz9Z0eNWNuw
-image: 
+image: "assets/img/siege-sandfox-screen.jpg"
 showmediapreview: true # Don't display image or video in item-preview, even if present
 pinned: 2
 ---

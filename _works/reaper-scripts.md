@@ -4,7 +4,7 @@ type: work
 title: "Reaper Scripts"
 description: "Some Reaper scripts I wrote to make my life easier - maybe they'll be useful to someone else"
 output: true
-image: 
+image: "assets/img/reaper-scripts-screenshot.jpg"
 external_image:
 youtube:
     id: 
@@ -14,4 +14,4 @@ showmediapreview: true # Don't display image or video in item-preview, even if p
 
 ### [https://github.com/echolevel/echolevel_ReaScripts](https://github.com/echolevel/echolevel_ReaScripts)
 
-Some Reaper scripts I wrote to make my life easier - maybe they'll be useful to someone else
+Some Reaper scripts I wrote to make my life easier - maybe they'll be useful to someone else.
