@@ -9,24 +9,11 @@
 {% assign i = include.item %}
 
 <article class="item">
-  <h3 class="item-title">
-    <a href="{{ i.url | relative_url }}">
-        {{ i.title }}
-    </a>
-    
-  </h3>
 
-<!--Only show date on blog post items-->
-  {% if i.collection == "posts" %}
-    <p class="item-date">Posted on {{ i.date | date: "%Y-%m-%d" }}</p>
-  {% endif %}
 
-    {% if i.description %}
-    <p class="item-desc">{{ i.description }}</p>
-  {% else %}
-    <p class="item-desc">{{ i.excerpt | strip_html | truncate: 160 }}</p>
-  {% endif %}
 
+
+  
     
 
 {% if i.showmediapreview == true %}
@@ -60,11 +47,35 @@
 
 {% endif %}
 
-  
+  <h3 class="item-title">
+    <a href="{{ i.url | relative_url }}">
+        {{ i.title }}
+    </a>
+    
+  </h3>
+
+{% if i.description %}
+    <p class="item-desc">{{ i.description }}</p>
+  {% else %}
+    <p class="item-desc">{{ i.excerpt | strip_html | truncate: 320 }}</p>
+  {% endif %}
+
+
+<p class="item-meta">
+
 {% if i.type == "blog" or i.output != false %}
-        <a href="{{ i.url | relative_url }}">Read more...</a><br/>
+    <span class="read-more">
+        <a href="{{ i.url | relative_url }}">Read more...</a>
+    </span>
     {% endif %}
-  
+
+<!--Only show date on blog post items-->
+  {% if i.collection == "posts" %}
+    <span class="item-date"><a href="{{ i.url | relative_url }}">Posted on {{ i.date | date: "%Y-%m-%d" }}</a></span>
+  {% endif %}
+
+
+</p>
 
   
 </article>

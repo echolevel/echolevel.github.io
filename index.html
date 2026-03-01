@@ -7,7 +7,7 @@ title: home
         <h4></h4>
         <strong>Brendan O'Callaghan Ratliff</strong> - composer, sound engineer and game developer.
               
-        I'm also Audio Director at <a target="_blank" rel="noopener noreferrer" href="https://cardboardsword.co.uk/">Cardboard Sword</a>
+        Audio Director at <a target="_blank" rel="noopener noreferrer" href="https://cardboardsword.co.uk/">Cardboard Sword</a>
         where we've just released 
         <a href="https://store.steampowered.com/app/653060/The_Siege_and_the_Sandfox/" target="_blank">The Siege and The Sandfox</a> and         
         <a href="https://www.meta.com/en-gb/experiences/transmission-shortwave/3547956195215144/" target="_blank">Transmission: Shortwave</a>.     
@@ -57,6 +57,7 @@ title: home
             Featured work:
         </div>
 
+        
         {% assign source = site.works %}
 
         {% assign pinned    = source | where_exp: "i", "i.pinned != nil" | where_exp: "i", "i.pinned >= 0" %}
@@ -67,13 +68,14 @@ title: home
 
         {% assign priorities = pinned | map: "pinned" | uniq | sort %}
 
-        {% for prio in priorities  limit:3 %}
+
+        {% for prio in priorities  limit:2 %}
             {% assign bucket = pinned | where: "pinned", prio | sort: "title" %}
             {% for it in bucket %}
                 {% include item-preview.html item=it %}
             {% endfor %}
         {% endfor %}
-
+        
 
 
     </div><!-- section end -->

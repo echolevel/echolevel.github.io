@@ -9,6 +9,11 @@
   src: url('../fonts/CourierPrime.ttf') format('truetype');
 }
 
+@font-face{
+  font-family: "SpaceGrotesk";
+  src: url('../fonts/SpaceGroteskVariable.ttf') format('truetype');
+}
+
 
 
 html {
@@ -168,7 +173,7 @@ a:hover {
 }
 
 .top-bar.scrolled::after {
-  opacity: 1;
+  opacity: 0;
 }
 
 
@@ -269,10 +274,6 @@ div.container {
     
     }
 
-    .item-date {
-        font-size: 15px;
-    }
-
     .pinned {
         color: gold;
         margin-left: 0.3em;
@@ -284,8 +285,15 @@ div.container {
 
       li {
         margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-        list-style:square;
+        margin-bottom: 0.5rem;        
+      }
+
+      ul li {
+        list-style: square;
+      }
+
+      ol li{
+        
       }
 
 
@@ -344,11 +352,16 @@ div.container {
 
       }
 
-        p.item-date {
+        p.item-meta {
             padding-bottom: 0rem;    
             padding-top: 0.4rem;
             margin: 0rem;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            font-size: 0.84rem;
         }
+
       
 
       .image {
@@ -381,8 +394,10 @@ div.container {
       font-size: 0.7rem;
       font-weight: 500;
       margin: 2rem;
+      margin-left: 0;
+      padding-top: 2rem;
       margin-bottom: 0;
-      text-align: center;
+      
     }
 
 }

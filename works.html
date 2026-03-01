@@ -30,7 +30,7 @@ custom_css: works.css
 
 {% assign priorities = pinned | map: "pinned" | uniq | sort %}
 
-<!-- <div class="items-container"> -->
+<div class="items-container">
     {% for prio in priorities %}
     {% assign bucket = pinned | where: "pinned", prio | sort: "title" %}
     {% for it in bucket %}
@@ -42,4 +42,4 @@ custom_css: works.css
     {% for it in others_sorted %}
     {% include item-preview.html item=it %}
     {% endfor %}
-<!-- </div> -->
+</div>

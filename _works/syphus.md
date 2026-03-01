@@ -1,8 +1,8 @@
 ---
 layout: post
 type: work
-title: "Syphus - chiptune/demoscene music"
-description: "An archive of decades' worth of my chiptune/demoscene music"
+title: "Syphus - demoscene & chiptune music"
+description: "An archive of decades' worth of my demoscene/chiptune music"
 output: true
 youtube: 
     id: a1FC2l_5QYI

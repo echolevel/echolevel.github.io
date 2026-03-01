@@ -2,12 +2,15 @@
 layout: default
 ---
 <article class="post">
+
+    <!--Only show date on blog post items-->
+    {% if page.date and page.layout == "post" %}
+        <p class="item-meta">Posted on {{ page.date | date_to_long_string }}</p>
+    {% endif %}
+
   <h4>{{ page.title }}</h4>
   
-  <!--Only show date on blog post items-->
-    {% if page.date and page.layout == "post" %}
-        <p class="item-date">Posted on {{ page.date | date_to_long_string }}</p>
-    {% endif %}
+  
 
     {% if page.image or page.external_image %}
         {% assign imgsrc = page.image | default: page.external_image %}    
