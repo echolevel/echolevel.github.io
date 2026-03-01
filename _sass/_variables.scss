@@ -7,8 +7,13 @@ $fontstack: SpaceGrotesk, DejaVu Sans Mono, monospace;
 
 $inverted: false;
 
+$fluid-min-vw: 360px;   // small phones
+$fluid-max-vw: 1200px;  // normal desktop content width
+
 $basefontsize: 16px;
+$maxfontsize: 24px;
 $baselineheight: 28px;
+$maxlineheight: 44px;
 $basefontweight: 400;
 $table_head_col: #ccc;
 $table_row_col: #eee;

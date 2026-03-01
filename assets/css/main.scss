@@ -17,21 +17,29 @@
 
 
 html {
-  font-size: $basefontsize
+  font-size: clamp(
+    $basefontsize, // 16px (min)
+    calc(#{$maxfontsize} - (#{$maxfontsize} - #{$basefontsize}) * ((100vw - #{$fluid-min-vw}) / (#{$fluid-max-vw} - #{$fluid-min-vw}))),
+    $maxfontsize   // 19px (max)
+  );
 }
 
 body {
+  line-height: clamp(
+    $baselineheight, // 28px min
+    calc(#{$maxlineheight} - (#{$maxlineheight} - #{$baselineheight}) * ((100vw - #{$fluid-min-vw}) / (#{$fluid-max-vw} - #{$fluid-min-vw}))),
+    $maxlineheight   // 32px max
+  );
   font-family: $fontstack;
   color: $pal_font;
-  font-size: 1rem;
   margin: 0;
   font-weight: $basefontweight;
-  line-height: $baselineheight;
   background: $pal_bg;  
   //background-image: url("../img/echo_crt_av.jpg");
   //background-attachment:fixed;
   //background-size: cover;
 }
+
 
 div.wrap {
   margin: auto;
