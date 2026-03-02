@@ -20,3 +20,5 @@ collections:
 plugins:
   - jekyll-feed
 timezone: Europe/London
+exclude:
+  - README.md

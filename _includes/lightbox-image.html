@@ -1,0 +1,20 @@
+{% assign src = include.src %}
+{% assign alt = include.alt | default: "" %}
+{% assign id  = include.id  | default: src | slugify %}
+
+
+<a href="#_" id="lb-{{ id }}" class="lightbox" aria-label="Close image">
+  <img src="{{ src | relative_url }}" alt="{{ alt }}">
+</a>
+
+<figure class="post-figure">
+  <a href="#lb-{{ id }}" class="lightbox-trigger">
+    <img src="{{ src | relative_url }}" alt="{{ alt }}">
+  </a>
+
+  {% if alt != "" %}
+    <figcaption class="post-caption">
+      {{ alt }}
+    </figcaption>
+  {% endif %}
+</figure>

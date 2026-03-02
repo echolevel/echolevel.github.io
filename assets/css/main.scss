@@ -124,8 +124,10 @@ a:hover {
 
   .nav-bar{
     max-width: $max-width;
-    width: 100%;
+    width: 100%;    
     margin: 0 auto;
+    padding-left: 0.4rem;
+    padding-right: 0.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -304,7 +306,9 @@ div.container {
         
       }
 
-
+      img {
+        max-width: 100%;
+      }
 
       #clients {
         background-color: $pal_bg;
@@ -442,6 +446,34 @@ div.container {
   opacity: 1;
 }
 
+.post-figure {
+  margin: 1rem 0;
+}
+
+.post-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.post-caption {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.post-video {
+    margin: 0;
+}
+
+.post-video video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  background: #000;
+  border-radius: 6px;
+}
 
 table {
 
