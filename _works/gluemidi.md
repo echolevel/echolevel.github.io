@@ -4,7 +4,7 @@ type: work
 title: "GlueMidi"
 description: "A MIDI routing app"
 output: true
-image: "assets/img/gluemidi-screenshot.png"
+image: "assets/img/gluemidi-screenshot.jpg"
 showmediapreview: true
 ---
 
