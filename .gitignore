@@ -7,5 +7,4 @@ Gemfile
 Gemfile.lock
 run.ps1
 echolevel.github.io.code-workspace
-.obsidian/ 
- 
+.obsidian/
