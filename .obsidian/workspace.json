@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/2026-09-25-obsidian-template-test.md",
+                "file": "_templates/blog-post.md.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-09-25-obsidian-template-test"
+              "title": "blog-post.md"
             }
           }
         ]
@@ -198,8 +198,8 @@
   },
   "active": "512e3ce76b29a4ab",
   "lastOpenFiles": [
-    "_templates/blog-post.md.md",
     "_posts/2026-09-25-obsidian-template-test.md",
+    "_templates/blog-post.md.md",
     "_posts/2025-10-29-newblog.md",
     "_templates",
     "_posts/2025-10-30-ARMvsx86-UE5-audio.md",
