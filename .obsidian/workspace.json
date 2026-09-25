@@ -11,14 +11,14 @@
             "id": "0f53088d58689dff",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "about.md",
-                "mode": "source",
-                "source": false
+                "aFile": "_posts/2025-10-29-newblog.md",
+                "bFile": "_posts/2025-10-29-newblog.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "about"
+              "icon": "diff",
+              "title": "Diff: 2025-10-29-newblog  (Working Tree)"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -195,5 +197,8 @@
     }
   },
   "active": "0f53088d58689dff",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "_posts/2025-10-29-newblog.md",
+    "about.md"
+  ]
 }
