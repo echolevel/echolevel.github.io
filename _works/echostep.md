@@ -11,7 +11,7 @@ showmediapreview: true # Don't display image or video in item-preview, even if p
 pinned: -1
 ---
 
-I wanted a really minimal step sequencer with NO built-in drum synth or sample player functionality and I couldn't find anything that fit the bell, so I wrote this for my own use.
+I wanted a really minimal step sequencer with NO built-in drum synth or sample player functionality and I couldn't find anything that fit the bill, so I wrote this for my own use.
 
 It's free, use as you please, but don't blame me if anything goes wrong. I'll try to fix any real howler bugs if they crop up, and I'll consider any reasonable requests for improvements and fixes for OS/DAW-specific quirks, but I make no promise of support beyond that.
 
