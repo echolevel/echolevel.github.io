@@ -63,7 +63,7 @@ accepts no liability for anything you do with it and offers no warranty against 
 
 ### Downloads
 
-**[Download EchoStep 1.0.0 VST3 and Standalone for Windows](/assets/downloads/EchoStep-1.0.0-7f6b356-Windows-x64)**
+**[Download EchoStep 1.0.0 VST3 and Standalone for Windows](/assets/downloads/EchoStep-1.0.0-7f6b356-Windows-x64.zip)**
 
 **[Download EchoStep 1.0.0 VST3 and Standalone for MacOS (NOT notarised)](/assets/downloads/EchoStep-1.0.0-1a80f5c-macOS-universal.zip)**
 
