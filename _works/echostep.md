@@ -73,7 +73,7 @@ There's no AU version for this one, because AU does not deal well with instrumen
 
 The MacOS version is NOT notarised/code-signed, because I'm not paying Apple $99 just so I can give away free software. This means you might have to employ some workarounds, which I've attempted to describe below. Try these _at your own risk_ - if you're not comfortable with the command line, maybe give it a miss. 
 
-Also bear in mind that the only Mac hardware I have is a 2015 MBP - probably Apple's last great laptop, but distinctly long in the tooth. I can build and run EchoStep on it, but I can't promise that it'll behave on modern Apple Silicon (M1 etc).
+Also bear in mind that the only Mac hardware I have is a 2015 MBP - probably Apple's last great laptop, but distinctly long in the tooth. I can run EchoStep on it, but I can't promise that it'll behave on modern Apple Silicon (M1 etc). However it is compiled on modern Apple Silicon via GitHub Actions, so hopefully it'll be fine!
 
 1. Install the plugin - copy VST3 to `~/Library/Audio/Plug-Ins/VST3/`
 2. If macOS blocks it, remove the quarantine flag:
