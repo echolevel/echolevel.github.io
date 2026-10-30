@@ -5,7 +5,7 @@ title: "EchoStep"
 description: "EchoStep: free MIDI-generating x0x step sequencer plugin"
 output: true # Don't generate an URL stub for this - just link directly to external_url from projects index
 youtube: 
-    id: 
+    id: 9QN-SAd9WMQ
 image: "assets/img/echostep.jpg"
 showmediapreview: true # Don't display image or video in item-preview, even if present
 pinned: -1
